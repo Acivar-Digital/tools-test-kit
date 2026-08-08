@@ -1,3 +1,4 @@
 sync.remote: "git+https://github.com/Acivar-Digital/tools-test-kit.git"
 validation:
     on-create: warn
+issue-prefix: "kit"
