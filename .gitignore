@@ -21,3 +21,10 @@ out/
 *.log
 .DS_Store
 
+.env
+
+# Beads/Dolt
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/

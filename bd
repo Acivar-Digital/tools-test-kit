@@ -1,0 +1,8 @@
+#!/bin/bash
+export DOLT_ROOT_PATH=$(pwd)/.dolt
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+fi
+exec /home/linuxbrew/.linuxbrew/bin/bd "$@"
