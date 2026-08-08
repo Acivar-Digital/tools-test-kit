@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-07-02T09:14:45.738303+00:00",
+  "elapsed_seconds": 98.55419206619263,
+  "results": [
+    {
+      "folder": "04_monthly",
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "tests": [
+        {
+          "file": "snapshot.json",
+          "status": "FAIL",
+          "checks": [
+            {
+              "step": 1,
+              "command": "/start",
+              "http_status": 200
+            },
+            {
+              "step": 2,
+              "command": "/input",
+              "http_status": 200
+            },
+            {
+              "step": 3,
+              "command": "frenfren",
+              "http_status": 200
+            },
+            {
+              "step": 4,
+              "command": "/input",
+              "http_status": 200
+            },
+            {
+              "step": 5,
+              "command": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Dingg Sii\n2\ufe0f\u20e3 Month: Yii Sii\n3\ufe0f\u20e3 Day: Gengg Chenn\n4\ufe0f\u20e3 Hour: Dingg Chouu\n5\ufe0f\u20e3 Da Yun: Gengg Zii\n6\ufe0f\u20e3 Strength: Weakk\n7\ufe0f\u20e3 Favorable: Metall, Watr\n8\ufe0f\u20e3 Unfavorable: Firee\n9\ufe0f\u20e3 Neutral: Earthh, Woodd",
+              "http_status": 200
+            },
+            {
+              "step": 6,
+              "command": "Yes",
+              "http_status": 200
+            },
+            {
+              "step": 7,
+              "command": "Yes",
+              "http_status": 200
+            },
+            {
+              "step": 8,
+              "command": "1",
+              "http_status": 200
+            },
+            {
+              "step": 9,
+              "command": "1",
+              "http_status": 200
+            },
+            {
+              "step": 10,
+              "command": "1",
+              "http_status": 200
+            }
+          ],
+          "errors": [
+            "Background compilation failed with alert: \u274c *Analysis Interrupted for 999*\n\nError: Report generation aborted: Month Geng Yin failed with error: Exceeded maximum output retries (1)\n\n```\nTraceback (most recent call last):\n  File \"/home/yapilwsl/arthityap/baziforecaster/src2/interfaces/telegram/pipeline.py\", line 86, in run_full_report_pipeline\n    await run_pydantic_engine(profile_path, master_json_path, progress_callback=progress)\n  File \"/home/yapilwsl/arthityap/baziforecaster/src2/engine/pydantic_prompt_engine.py\", line 745, in run_pydantic_engine\n    raise RuntimeError(\n        f\"Report generation aborted: Month {month_res['month_name']} failed with error: {month_res['error']}\"\n    )\nRuntimeError: Report generation aborted: Month Geng Yin failed with error: Exceeded maximum output retries (1)\n\n``` (baziforeporter-only: generated log content, not in standalone kit download)",
+            "Timeout waiting for background monthly report completion message."
+          ]
+        }
+      ]
+    }
+  ]
+}

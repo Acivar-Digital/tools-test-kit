@@ -1,0 +1,31 @@
+{
+  "scanned_files_count": "{{scanned_files_count}}",
+  "clashes": [
+    {
+      "file_path": "src2/{{module}}.py",
+      "line": {{line}},
+      "variable": "{{VARIABLE_NAME}}",
+      "registry_class": "{{SomeClass}}",
+      "expression": "{{VARIABLE_NAME}}[{{key}}]",
+      "status": "CLASH",
+      "reason": "{{why_it_clashes}} — {{remediation_hint}}",
+      "suggested_fix": "Replace registry lookup with a typed accessor or pass the dependency explicitly."
+    }
+  ],
+  "surprises": [],
+  "suspects": [],
+  "ok": [
+    {
+      "file_path": "src2/core/{{module}}.py",
+      "line": {{line}},
+      "variable": "{{VARIABLE_NAME}}",
+      "method": "__getitem__",
+      "expression": "{{VARIABLE_NAME}}[{{key}}]",
+      "status": "OK",
+      "reason": "Dynamically verified safe. LLM skipped.",
+      "registry_class": "?",
+      "suggested_fix": null,
+      "verified_status": "LLM_MISMATCH_SAFE"
+    }
+  ]
+}

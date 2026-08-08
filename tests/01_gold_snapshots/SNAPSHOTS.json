@@ -1,0 +1,247 @@
+{
+  "scenario": "full_auto_intake",
+  "description": "Complete E2E auto intake flow for Test Profile (TEST)",
+  "test_user": {
+    "chat_id": 999,
+    "name": "Test Profile",
+    "alias": "TEST",
+    "gender": "Male",
+    "dob": "1977-04-28 11:51",
+    "location": "Singapore"
+  },
+  "expected_pillars": {
+    "year": "Ding Si",
+    "month": "Jia Chen",
+    "day": "Yi Mao",
+    "hour": "Ren Wu",
+    "da_yun": "Ji Hai",
+    "strength": "Strong",
+    "favorable": [
+      "Fire",
+      "Earth"
+    ],
+    "unfavorable": [
+      "Wood",
+      "Water"
+    ],
+    "neutral": [
+      "Metal"
+    ]
+  },
+  "state_transitions": [
+    "START",
+    "CHOOSING",
+    "COLLECTING",
+    "CONFIRM",
+    "TAILORING",
+    "PROCESSING"
+  ],
+  "conversation": [
+    {
+      "rowid": 80,
+      "role": "user",
+      "text": "/start",
+      "timestamp": "2026-06-05 02:23:46"
+    },
+    {
+      "rowid": 81,
+      "role": "bot",
+      "text": "🔮 *Welcome to BaziForcast Bot*\n\nI generate AI-powered monthly forecasts for 2026 using the Zi Ping structural methodology.\n\n⚠️ *Important:* For this application to work accurately, your **time of birth** and **location** are needed.\n\n💡 If you don't know your exact birth time, you can try this app to figure it out:\n🔗 [Bazilogy True Hour](https://chatgpt.com/g/g-685ba9181e0481918b6db7d85b8ec59e-bazilogy-true-hour)\n\nHow would you like to proceed?\n\n🤖 /auto — *Automated*: I will calculate your pillars from your birth details.\n⌨️ /input — *Manual*: Provide your own Bazi parameters (template provided).\n\n_Please select an option above to begin._",
+      "timestamp": "2026-06-05 02:23:46"
+    },
+    {
+      "rowid": 82,
+      "role": "user",
+      "text": "/auto",
+      "timestamp": "2026-06-05 02:24:46"
+    },
+    {
+      "rowid": 83,
+      "role": "bot",
+      "text": "I'd be happy to help! To get started, could you please tell me your name (or a nickname) and your gender?",
+      "timestamp": "2026-06-05 02:24:46"
+    },
+    {
+      "rowid": 84,
+      "role": "user",
+      "text": "Name: Test Profile, Alias: TEST, Gender: Male",
+      "timestamp": "2026-06-05 02:25:34"
+    },
+    {
+      "rowid": 85,
+      "role": "bot",
+      "text": "Thanks, Tester! Now, could you please provide your date and time of birth, as well as your place of birth?",
+      "timestamp": "2026-06-05 02:25:34"
+    },
+    {
+      "rowid": 86,
+      "role": "user",
+      "text": "DOB: 1977-04-28 11:51, Location: Singapore",
+      "timestamp": "2026-06-05 02:26:26"
+    },
+    {
+      "rowid": 87,
+      "role": "bot",
+      "text": "You provided: 1977-04-28 11:51 (Location: Singapore).\nThis is what we have generated based on what you have given us. Please confirm.\n\n📋 *Here is what I understood:*\n\n🎂 Age: 49 yrs 2 mths\n🏷️ Name/Alias: Test Profile (TEST)\n👤 Gender: Male\n1️⃣ Year: Ding Si\n2️⃣ Month: Jia Chen\n3️⃣ Day: Yi Mao\n4️⃣ Hour: Ren Wu\n5️⃣ Da Yun: Ji Hai\n6️⃣ Strength: Strong\n7️⃣ Favorable: Fire, Earth\n8️⃣ Unfavorable: Wood, Water\n9️⃣ Neutral: Metal\n\n⚠️ *Please verify this is correct.*\nReply *Yes* to proceed, or tell me what to fix.",
+      "timestamp": "2026-06-05 02:26:26"
+    },
+    {
+      "rowid": 88,
+      "role": "user",
+      "text": "Yes",
+      "timestamp": "2026-06-05 02:27:27"
+    },
+    {
+      "rowid": 89,
+      "role": "bot",
+      "text": "✨ *Before I generate your 2026 report...*\n\nYou have the option to make this a **highly tailored** report — one that\nspeaks directly to your real concerns this year.\n\nI'll ask you **3 short questions** about:\n1️⃣ Career\n2️⃣ Relationships\n3️⃣ Wealth\n\nWould you like a **customised report**?\n",
+      "timestamp": "2026-06-05 02:27:27"
+    },
+    {
+      "rowid": 90,
+      "role": "user",
+      "text": "Yes",
+      "timestamp": "2026-06-05 02:28:04"
+    },
+    {
+      "rowid": 91,
+      "role": "bot",
+      "text": "💼 *Career — What is your 2026 focus?*\n\nPick one or type your own:\n1️⃣ **Growth:** \"Is this a good year to seek a promotion or salary raise in my current role?\"\n2️⃣ **Change:** \"Should I pivot to a new industry or look for a new job elsewhere?\"\n3️⃣ **Business:** \"What are the success prospects for starting or scaling my own venture?\"\n4️⃣ **Transition:** \"I'm currently between jobs; when are my best windows for a comeback?\"\n5️⃣ **Politics:** \"How can I best handle workplace dynamics and improve my standing?\"\n\n_Type the number or your own specific question._\n",
+      "timestamp": "2026-06-05 02:28:04"
+    },
+    {
+      "rowid": 92,
+      "role": "user",
+      "text": "1",
+      "timestamp": "2026-06-05 02:28:53"
+    },
+    {
+      "rowid": 93,
+      "role": "bot",
+      "text": "💑 *Relationships — What is on your mind?*\n\nPick one or type your own:\n1️⃣ **New Love:** \"What are my prospects for meeting a new romantic partner this year?\"\n2️⃣ **Commitment:** \"How can I improve the harmony and depth of my current relationship?\"\n3️⃣ **Family:** \"What should I focus on for stability and joy within my family and home?\"\n4️⃣ **Social:** \"How can I expand my network and avoid 'toxic' or unsupportive peers?\"\n5️⃣ **Self-Growth:** \"Is this a year to prioritize self-healing and personal independence?\"\n\n_Type the number or your own specific question._\n",
+      "timestamp": "2026-06-05 02:28:53"
+    },
+    {
+      "rowid": 94,
+      "role": "user",
+      "text": "1",
+      "timestamp": "2026-06-05 02:29:49"
+    },
+    {
+      "rowid": 95,
+      "role": "bot",
+      "text": "💰 *Wealth — What is your focus for 2026?*\n\nPick one or type your own:\n1️⃣ **High Growth:** \"Is 2026 favorable for aggressive investments and new wealth creation?\"\n2️⃣ **Security:** \"What is the best way to safeguard my existing assets and stay stable?\"\n3️⃣ **Side Income:** \"How can I maximize my secondary income or side-hustle profitability?\"\n4️⃣ **Major Spend:** \"Is this a good time for big purchases like property or car?\"\n5️⃣ **Risk:** \"What specific 'wealth leakage' or unexpected costs should I prepare for?\"\n\n_Type the number or your own specific question._\n",
+      "timestamp": "2026-06-05 02:29:49"
+    },
+    {
+      "rowid": 96,
+      "role": "user",
+      "text": "1",
+      "timestamp": "2026-06-05 02:32:07"
+    },
+    {
+      "rowid": 97,
+      "role": "bot",
+      "text": "🎯 *Perfect. I have noted your three concerns.*\n\nYour report will now be tailored around:\n✅ Career: _1_\n✅ Relationships: _1_\n✅ Wealth: _1_\n\nGenerating your personalised Bazi forecast now... ⏳\n",
+      "timestamp": "2026-06-05 02:32:07"
+    }
+  ],
+  "final_session_state": {
+    "chat_id": 999,
+    "step": "PROCESSING",
+    "profile": {
+      "year_pillar": {
+        "stem": "Ding",
+        "branch": "Si"
+      },
+      "month_pillar": {
+        "stem": "Jia",
+        "branch": "Chen"
+      },
+      "day_pillar": {
+        "stem": "Yi",
+        "branch": "Mao"
+      },
+      "hour_pillar": {
+        "stem": "Ren",
+        "branch": "Wu"
+      },
+      "da_yun_pillar": {
+        "stem": "Ji",
+        "branch": "Hai"
+      },
+      "da_yun_start_year": null,
+      "day_master_strength": "Strong",
+      "favorable_elements": [
+        "Fire",
+        "Earth"
+      ],
+      "unfavorable_elements": [
+        "Wood",
+        "Water"
+      ],
+      "neutral_elements": [
+        "Metal"
+      ],
+      "gender": "M",
+      "day_stem_stream": null,
+      "structure": "普通格局",
+      "domain_focus": "General",
+      "alias": "Test Profile (TEST)",
+      "name": null,
+      "relation_category": null,
+      "sexuality_dynamic": null
+    },
+    "stakeholders": {},
+    "metadata": {
+      "intake_mode": "auto",
+      "dob": "1977-04-28 11:51",
+      "location": "Singapore",
+      "has_time": true,
+      "birth_datetime_parsed": "1977-04-28T11:51:00",
+      "tailoring": {
+        "step": "done",
+        "career": "1",
+        "relationships": "1",
+        "wealth": "1",
+        "health": null,
+        "health_concern": null,
+        "skipped": false
+      },
+      "tailoring_concerns": {
+        "career": "1",
+        "relationships": "1",
+        "wealth": "1",
+        "health": null,
+        "health_concern": null
+      }
+    },
+    "conversation_history": [
+      {
+        "role": "user",
+        "content": "I selected automated calculation mode. Please guide me."
+      },
+      {
+        "role": "assistant",
+        "content": "I'd be happy to help! To get started, could you please tell me your name (or a nickname) and your gender?"
+      },
+      {
+        "role": "user",
+        "content": "Name: Test Profile, Alias: TEST, Gender: Male"
+      },
+      {
+        "role": "assistant",
+        "content": "Thanks, Tester! Now, could you please provide your date and time of birth, as well as your place of birth?"
+      },
+      {
+        "role": "user",
+        "content": "DOB: 1977-04-28 11:51, Location: Singapore"
+      },
+      {
+        "role": "assistant",
+        "content": "Thank you, computing your chart now..."
+      }
+    ],
+    "version": 8
+  }
+}

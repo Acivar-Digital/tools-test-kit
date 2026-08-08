@@ -1,0 +1,42 @@
+{
+  "scenario": "month_read_12",
+  "description": "Tests /12 month narrative (Xin Chou: 05 Jan onwards)",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_has_report": false,
+    "report_master_json_exists": true,
+    "user_exists_in_db": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": 1,
+      "input": {
+        "command": "/12",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains_any": [
+          "Xin Chou",
+          "05 Jan onwards",
+          "2026"
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "/1-/12 are read-only",
+    "get_month_narrative(master_json_path, 11) reads month_12.json from disk",
+    "If simple_narrative missing, narrative_simplifier generates it",
+    "Read-only command \u2014 session step unchanged",
+    "Month: {info['name']} \u2014 {info['range']}"
+  ],
+  "last_updated": "2026-06-27T00:53:50.375619+00:00"
+}

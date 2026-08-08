@@ -1,0 +1,82 @@
+/
+├── CC_REDUCTION_PLAN.md
+├── README.md
+├── cleanup.md
+├── cleanup.py
+├── daily
+│   ├── dailygit-check.py
+│   └── dotenv.py
+├── exceptions.json
+├── reports
+│   ├── Summary_Next_Steps.md
+│   ├── async_hazards_audit.json
+│   ├── async_hazards_audit.md
+│   ├── audit_candidates.json
+│   ├── audit_findings.json
+│   ├── chunks
+│   ├── circular_deps_audit.json
+│   ├── circular_deps_audit.md
+│   ├── dead_code_audit.json
+│   ├── dead_code_audit.md
+│   ├── dict_access_on_models.json
+│   ├── dict_access_on_models.md
+│   ├── dict_access_on_models_Gemini35.json
+│   ├── dict_access_runtime.json
+│   ├── dict_access_runtime.md
+│   ├── duplication_audit.json
+│   ├── duplication_audit.md
+│   ├── engine_schemas_audit.json
+│   ├── engine_schemas_audit.md
+│   ├── engine_schemas_checkpoint.jsonl
+│   ├── env_drift_audit.json
+│   ├── env_drift_audit.md
+│   ├── find_engine_schemas.json
+│   ├── kill_tries.json
+│   ├── kill_tries_checkpoint.jsonl
+│   ├── message_drift_audit.json
+│   ├── message_drift_audit.md
+│   ├── registry_clashes.json
+│   ├── registry_clashes_checkpoint.jsonl
+│   ├── schema_audit_checkpoint.jsonl
+│   ├── secrets_audit.json
+│   ├── secrets_audit.md
+│   ├── silent_killers_audit.json
+│   ├── silent_killers_audit.md
+│   └── type_safety_audit.md
+├── run-registry-scan.sh
+├── scanners
+│   ├── 01_Reduce_CC_Tries.md
+│   ├── 03_Reduce_CC_Tries_Again.md
+│   ├── 04_Reduce_CC_Tries_Again.md
+│   ├── 99_YOLO_Mode.md
+│   ├── find_async_hazards.py
+│   ├── find_cc_nested.py
+│   ├── find_circular_deps.py
+│   ├── find_dead_code.py
+│   ├── find_dict_access_on_models.py
+│   ├── find_duplication.py
+│   ├── find_engine_schemas.py
+│   ├── find_env_drift.py
+│   ├── find_message_drift.py
+│   ├── find_registry_clashes.py
+│   ├── find_secrets.py
+│   ├── find_silent_killers.py
+│   ├── find_type_safety.py
+│   ├── kill_tries.py
+│   ├── kill_tries_apply.py
+│   ├── kill_tries_list.txt
+│   ├── kill_tries_old.py
+│   ├── kill_tries_post_check.py
+│   ├── kill_tries_prompt.yaml
+│   ├── kill_tries_prompt_contradiction_resolver.yaml
+│   ├── kill_tries_prompt_retry.yaml
+│   ├── kill_tries_prompt_retry_contradiction_resolver.yaml
+│   ├── kill_tries_pydantic.py
+│   ├── run_all.py
+│   ├── status.py
+│   ├── utils.py
+│   ├── verify_dict_access_runtime.py
+│   └── virtual_ast_buffer.py
+└── tree.txt
+
+4 directories, 75 files

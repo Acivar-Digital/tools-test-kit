@@ -1,0 +1,26 @@
+[build-system]
+requires = ["uv>=0.5.0"]
+build-backend = "uv.build"
+
+[project]
+name = "community-test-kit"
+version = "0.1.0"
+description = "Curated, runnable slices of the baziforecaster test suite for interviews and the community."
+requires-python = ">=3.11"
+dependencies = [
+  "pytest>=8",
+  "hypothesis>=6",
+]
+
+# mutmut configuration (see 07_mutation_testing/). Run: `uv run mutmut run`
+[tool.mutmut]
+source_paths = ["src2/engine/"]
+tests_dir = ["07_mutation_testing"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["examples"]
+python_files = ["test_*.py", "*_test.py", "0[1-9]_*.py"]
+addopts = "-q"

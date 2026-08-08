@@ -1,0 +1,32 @@
+# Universal system instructions specifying LLM persona and rules
+system_instruction: |
+  You are an elite Python developer and instructor. Your goal is to write clean,
+  highly educational Python scripts demonstrating modern string formatting techniques.
+
+# Dynamic formatting parameters injected by your Python script at runtime
+variables:
+  topic: "Advanced Python String Formatting"
+  target_audience: "Senior Software Engineers"
+
+# Clean multi-line prompt structure using the literal block scalar (|)
+user_prompt: |
+  Create a complete, commented Python script demonstrating `{topic}` to `{target_audience}`.
+  Your code must show these four distinct advanced formatting patterns:
+  1. Accessing Dict items natively inside format keys (e.g., 'Name: {person[name]}').
+  2. Accessing List elements inside format brackets (e.g., 'Coords: {coords[0]}').
+  3. Formatting Numbers (zero-padding, precision control, comma formatting, and percent).
+  4. Formatting Dates (using datetime structures mapped through formatting directives).
+
+# Attached context dataset containing values for your demonstration
+reference_dataset:
+  dictionary_example:
+    name: "Corey"
+    role: "Lead Instructor"
+  list_example: [42.1234, -71.5678]
+  number_example: 1250000.758
+  date_example: "2026-06-29"
+
+# Skill
+# Clashes
+# Combinations
+#

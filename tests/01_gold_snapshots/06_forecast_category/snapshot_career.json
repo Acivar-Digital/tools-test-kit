@@ -1,0 +1,58 @@
+{
+  "scenario": "forecast_category_career",
+  "description": "Tests /career Chronomancer forecast category command",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_has_report": false,
+    "user_is_admin": true,
+    "can_use_chronomancer": true,
+    "user_exists_in_db": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": "setup_1",
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/career",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Chronomancer is thinking",
+        "bot_message_contains_any": [
+          "Top 3",
+          "Worst 3",
+          "career",
+          "score"
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "All forecast category commands set CHRONOMANCER",
+    "handle_forecast_category(chat_id, 'career') reads profile from master JSON",
+    "Requires can_use_chronomancer (admin bypasses)",
+    "Sets session.step to CHRONOMANCER after response",
+    "LLM-driven output \u2014 exact wording varies, use contains matching"
+  ],
+  "last_updated": "2026-06-27T00:51:40.304222+00:00"
+}

@@ -1,18 +1,22 @@
 # Dependencies
 node_modules/
 .pnpm-store/
+.venv/
+venv/
 
 # Build & Dist
 dist/
 build/
 .next/
 out/
+*.egg-info/
 
 # Environment & Config
 .env
 .env.local
 .env.production
 .vscode/
+env.d/
 
 # Setup & Instructions
 .setup.md
@@ -21,7 +25,18 @@ out/
 *.log
 .DS_Store
 
-.env
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
 
 # Beads/Dolt
 .dolt/

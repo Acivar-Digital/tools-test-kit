@@ -1,0 +1,56 @@
+{
+  "scenario": "forecast_30",
+  "description": "Tests /30 Chronomancer 30-day highlights command",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_has_report": false,
+    "user_is_admin": true,
+    "can_use_chronomancer": true,
+    "user_exists_in_db": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": "setup_1",
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/30",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Chronomancer is thinking",
+        "bot_message_contains_any": [
+          "30",
+          "day",
+          "highlight"
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "All forecast category commands set CHRONOMANCER",
+    "handle_forecast(chat_id, 30) generates 30-day highlights",
+    "Requires can_use_chronomancer (admin bypasses)",
+    "Sets session.step to CHRONOMANCER after response"
+  ],
+  "last_updated": "2026-06-27T00:50:48.272548+00:00"
+}

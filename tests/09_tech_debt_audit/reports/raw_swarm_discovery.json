@@ -1,0 +1,638 @@
+[
+  {
+    "line": 635,
+    "issue": "Stray Tag",
+    "raw_code": "# TODO: core_elements vary by stem combination \u2014 populate per instance",
+    "file": "src/engine/bazi_data.py"
+  },
+  {
+    "line": 648,
+    "issue": "Stray Tag",
+    "raw_code": "# TODO: core_elements vary by stem combination \u2014 populate per instance",
+    "file": "src/engine/bazi_data.py"
+  },
+  {
+    "line": 55,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.error(f\"Simplification failed for {month_data.get('month_name')}: {e}\")\n        return \"Simplification failed. Please refer to technical report.\"",
+    "file": "src/engine/narrative_simplifier.py"
+  },
+  {
+    "line": 155,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.error(f\"Advisory simplification failed: {e}\")\n        return text",
+    "file": "src/engine/narrative_simplifier.py"
+  },
+  {
+    "line": 175,
+    "issue": "Stray Tag",
+    "raw_code": "# Branch Audit (check all 4 natal branches \u2014 BUG 3 fix)",
+    "file": "src/engine/module1_macro.py"
+  },
+  {
+    "line": 275,
+    "issue": "Stray Tag",
+    "raw_code": "# V31: Tai Sui Trigger Detection (all 6 conditions)",
+    "file": "src/engine/module1_macro.py"
+  },
+  {
+    "line": 293,
+    "issue": "Stray Tag",
+    "raw_code": "# V31: Derive signed ann_branch_impact from trigger list (replaces legacy 1-pillar path)",
+    "file": "src/engine/module1_macro.py"
+  },
+  {
+    "line": 337,
+    "issue": "Stray Tag",
+    "raw_code": "# V31: Tai Sui Formulas \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500",
+    "file": "src/engine/module1_macro.py"
+  },
+  {
+    "line": 344,
+    "issue": "Stray Tag",
+    "raw_code": "# BUG 4: False Positive Trap awareness):",
+    "file": "src/engine/module1_macro.py"
+  },
+  {
+    "line": 63,
+    "issue": "God Function",
+    "raw_code": "def calculate_root(...):",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 265,
+    "issue": "God Function",
+    "raw_code": "def get_root_sub_score(...):",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 326,
+    "issue": "God Function",
+    "raw_code": "def calculate_dm_strength_tier1(...):",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 385,
+    "issue": "God Function",
+    "raw_code": "def calculate_clash_adjusted_dm_score(...):",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 443,
+    "issue": "God Function",
+    "raw_code": "def calculate_output_drain(...):",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 365,
+    "issue": "Stray Tag",
+    "raw_code": "# NOTE: Flat 0.3 is INTENTIONAL \u2014 this is the pedagogical Tier 1 formula.",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 369,
+    "issue": "Stray Tag",
+    "raw_code": "# DO NOT change to proportional weights \u2014 that would break the pedagogical",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 370,
+    "issue": "Stray Tag",
+    "raw_code": "# contract. See _docs/DEV/V31/BUGS/BUGS_CHAP12_AUDIT.md \u00a7Items Skipped.",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 416,
+    "issue": "Stray Tag",
+    "raw_code": "# NOTE: hidden_ratio applies to ALL hidden stems uniformly (not just DM root).",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 421,
+    "issue": "Stray Tag",
+    "raw_code": "# 3. This is architecturally more consistent than the book's example",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 422,
+    "issue": "Stray Tag",
+    "raw_code": "# DO NOT restrict 100% to DM-element only. See BUGS_CHAP12_AUDIT.md \u00a7Items Skipped.",
+    "file": "src/engine/module2_root.py"
+  },
+  {
+    "line": 336,
+    "issue": "Silent Failure",
+    "raw_code": "pass  # Transformation filled the void \u2014 degradation suppressed",
+    "file": "src/engine/module0_geju.py"
+  },
+  {
+    "line": 205,
+    "issue": "Stray Tag",
+    "raw_code": "# TODO: Tune Extreme_Strong DSI bonus from classical source",
+    "file": "src/engine/bazi_math.py"
+  },
+  {
+    "line": 206,
+    "issue": "Stray Tag",
+    "raw_code": "# TODO: Tune Extreme_Weak DSI bonus from classical source",
+    "file": "src/engine/bazi_math.py"
+  },
+  {
+    "line": 215,
+    "issue": "God Function",
+    "raw_code": "def classify_events(triggers: dict[str, Any], profile: dict[str, Any]) -> list[dict[str, Any]]:",
+    "file": "src/engine/module10_classification.py"
+  },
+  {
+    "line": 536,
+    "issue": "Stray Tag",
+    "raw_code": "# Module 0.5: Ge Ju Classifier (V28).",
+    "file": "src/engine/module12_compatibility.py"
+  },
+  {
+    "line": 33,
+    "issue": "Stray Tag",
+    "raw_code": "# B6 Fix: For December birthdays, the next Jieqi falls in January of year+1.",
+    "file": "src/engine/da_yun.py"
+  },
+  {
+    "line": 48,
+    "issue": "Stray Tag",
+    "raw_code": "# B6 Fix: no forward term found (Dec birthday) \u2014 try year+1",
+    "file": "src/engine/da_yun.py"
+  },
+  {
+    "line": 12,
+    "issue": "God Function",
+    "raw_code": "def format_k3_markdown(json_path: str, md_path: str) -> None:",
+    "file": "src/engine/report_formatter.py"
+  },
+  {
+    "line": 24,
+    "issue": "God Function",
+    "raw_code": "def detect_stars(profile: dict, month_data: dict = None, annual_pillar: dict = None) -> list:",
+    "file": "src/engine/stars.py"
+  },
+  {
+    "line": 165,
+    "issue": "Silent Failure",
+    "raw_code": "except NotImplementedError:\n            pass",
+    "file": "src/engine/daily_pillar.py"
+  },
+  {
+    "line": 206,
+    "issue": "Silent Failure",
+    "raw_code": "except (NotImplementedError, ValueError):\n        pass",
+    "file": "src/engine/daily_pillar.py"
+  },
+  {
+    "line": 225,
+    "issue": "Silent Failure",
+    "raw_code": "except (NotImplementedError, ValueError):\n                pass",
+    "file": "src/engine/daily_pillar.py"
+  },
+  {
+    "line": 193,
+    "issue": "God Function",
+    "raw_code": "def resolve_daily_pillar_range(start_date: date, end_date: date) -> list[dict]:",
+    "file": "src/engine/daily_pillar.py"
+  },
+  {
+    "line": 66,
+    "issue": "God Function",
+    "raw_code": "def format_markdown_summary(summary_data: dict, profile_data: dict, month_metadata_list: list, months_forecast_data: list) -> str:",
+    "file": "src/engine/summarizer.py"
+  },
+  {
+    "line": 133,
+    "issue": "God Function",
+    "raw_code": "async def run_summarizer_async(",
+    "file": "src/engine/summarizer.py"
+  },
+  {
+    "line": 147,
+    "issue": "Deep Nesting",
+    "raw_code": "if not live_api and os.path.exists(CACHE_PATH): ... else: ... for m in months: ... if raw_date: ... try: ... except Exception as e:",
+    "file": "src/engine/summarizer.py"
+  },
+  {
+    "line": 536,
+    "issue": "Stray Tag",
+    "raw_code": "# Apply classical source hierarchy ranking (BUG 3 fix)",
+    "file": "src/engine/contradiction_resolver.py"
+  },
+  {
+    "line": 10,
+    "issue": "Stray Tag",
+    "raw_code": "# TODO: fix this math",
+    "file": "src/engine/solar_calendar.py"
+  },
+  {
+    "line": 13,
+    "issue": "Stray Tag",
+    "raw_code": "# TODO: fix this math",
+    "file": "src/engine/solar_calendar.py"
+  },
+  {
+    "line": 146,
+    "issue": "Stray Tag",
+    "raw_code": "# SOURCE NOTE: Yi->Yin, Ding->Si follow Di Tian Sui (aggressive interpretation).",
+    "file": "src/engine/shen_sha_data.py"
+  },
+  {
+    "line": 147,
+    "issue": "Stray Tag",
+    "raw_code": "# Alternative: Yi->Chen, Ding->Wei per San Ming Tong Hui. Locked to Di Tian Sui for consistency.",
+    "file": "src/engine/shen_sha_data.py"
+  },
+  {
+    "line": 15,
+    "issue": "Stray Tag",
+    "raw_code": "# T11e-fix:",
+    "file": "src/engine/module11_probability.py"
+  },
+  {
+    "line": 205,
+    "issue": "Stray Tag",
+    "raw_code": "# T11e-fix: confidence_level semantics corrected.",
+    "file": "src/engine/module11_probability.py"
+  },
+  {
+    "line": 75,
+    "issue": "Deep Nesting",
+    "raw_code": "for inc_s in incoming_stems:\n        if STEM_COMBINES.get(inc_s) == dm_stem:\n            stem_link = 1\n            break\n        for p_name in [\"year\", \"month\", \"day\", \"hour\"]:\n            s = profile.get(f\"{p_name}_pillar\", {}).get(\"stem\")\n            stem_info = HEAVENLY_STEMS.get(s)\n            if stem_info and stem_info[\"element\"] in favorable_elements:\n                if STEM_COMBINES.get(inc_s) == s:\n                    stem_link = 1\n                    break",
+    "file": "src/engine/module5_causal.py"
+  },
+  {
+    "line": 92,
+    "issue": "Deep Nesting",
+    "raw_code": "for disruptor in active_disruptors:\n        # Check for hidden_warfare key (populated by Module 3 or derived from disruptor metadata)\n        warfare = disruptor.get(\"hidden_warfare\") or disruptor.get(\"warfare_data\", [])\n        for w in warfare:\n            target_stem = w[\"target\"]\n            status = w[\"status\"]\n            target_info = HEAVENLY_STEMS.get(target_stem)\n            if target_info and target_info[\"element\"] in favorable_elements:\n                if status in [\"DESTROYED\", \"DAMAGED\"]:\n                    hidden_link = 1\n                    break",
+    "file": "src/engine/module5_causal.py"
+  },
+  {
+    "line": 335,
+    "issue": "God Function",
+    "raw_code": "async def call_openrouter_async(...):",
+    "file": "src/engine/openrouter.py"
+  },
+  {
+    "line": 515,
+    "issue": "God Function",
+    "raw_code": "async def call_local_llm_async(...):",
+    "file": "src/engine/openrouter.py"
+  },
+  {
+    "line": 615,
+    "issue": "God Function",
+    "raw_code": "def call_openrouter_sync(...):",
+    "file": "src/engine/openrouter.py"
+  },
+  {
+    "line": 40,
+    "issue": "God Function",
+    "raw_code": "async def run_engine(",
+    "file": "src/engine/prompt_engine.py"
+  },
+  {
+    "line": 155,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.warning(\"Failed to parse age from DOB: %s \u2014 %s\", dob_str, e, exc_info=True)\n            pass",
+    "file": "src/engine/orchestrator.py"
+  },
+  {
+    "line": 285,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.warning(\"validate_special_structure failed: %s\", e, exc_info=True)\n        ge_ju_results[\"special_structure_validation\"] = {\"is_special_structure\": False}",
+    "file": "src/engine/orchestrator.py"
+  },
+  {
+    "line": 465,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.warning(\"Compatibility analysis failed: %s\", e, exc_info=True)",
+    "file": "src/engine/orchestrator.py"
+  },
+  {
+    "line": 136,
+    "issue": "God Function",
+    "raw_code": "def run_full_engine(profile: dict[str, Any], target_month_idx: int, target_year: int = 2026) -> dict[str, Any]:",
+    "file": "src/engine/orchestrator.py"
+  },
+  {
+    "line": 365,
+    "issue": "God Function",
+    "raw_code": "def calculate_interactions(profile: dict, month_data: dict, annual_pillar: dict, month_branch: str | None = None, continuous_score: float | None = None, dm_tier1_score: float | None = None) -> dict:",
+    "file": "src/engine/module3_interaction.py"
+  },
+  {
+    "line": 475,
+    "issue": "Stray Tag",
+    "raw_code": "# BUG 5: Seasonal exception \u2014 \u00d70.3 if not prosperous",
+    "file": "src/engine/module3_interaction.py"
+  },
+  {
+    "line": 502,
+    "issue": "Stray Tag",
+    "raw_code": "# BUG 1: Self is per-branch property",
+    "file": "src/engine/module3_interaction.py"
+  },
+  {
+    "line": 512,
+    "issue": "Deep Nesting",
+    "raw_code": "if phase in (\"Si\", \"Qiu\"): severity *= 0.3",
+    "file": "src/engine/module3_interaction.py"
+  },
+  {
+    "line": 615,
+    "issue": "Stray Tag",
+    "raw_code": "# BUG 5: Seasonal exception \u2014 \u00d70.3 if not prosperous",
+    "file": "src/engine/module3_interaction.py"
+  },
+  {
+    "line": 622,
+    "issue": "Deep Nesting",
+    "raw_code": "if phase in (\"Si\", \"Qiu\"): severity *= 0.3",
+    "file": "src/engine/module3_interaction.py"
+  },
+  {
+    "line": 125,
+    "issue": "Deep Nesting",
+    "raw_code": "async with BaziRAG_LOCK:\n            async with sse_client(mcp_url) as streams:\n                async with ClientSession(streams[0], streams[1]) as session:\n                    await asyncio.wait_for(session.initialize(), timeout=15.0)\n                    result = await asyncio.wait_for(\n                        session.call_tool(\"search_bazi\", {\"query\": query}),\n                        timeout=30.0,\n                    )",
+    "file": "src/engine/rag_client.py"
+  },
+  {
+    "line": 8,
+    "issue": "God Function",
+    "raw_code": "def calculate_medicine(\n    profile: dict,\n    month_data: dict,\n    is_void_active: bool,\n    interaction_results: dict,\n    strength_profile: dict = None,  # V28: Added strength_profile\n) -> dict:",
+    "file": "src/engine/module4_medicine.py"
+  },
+  {
+    "line": 245,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception:\n        pass",
+    "file": "src/bot/preflight.py"
+  },
+  {
+    "line": 105,
+    "issue": "Silent Failure",
+    "raw_code": "except (ValueError, TypeError):\n                pass",
+    "file": "src/bot/intake.py"
+  },
+  {
+    "line": 135,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.warning(f\"\u26a0\ufe0f LLM warm-up request failed: {e}\")",
+    "file": "src/bot/intake.py"
+  },
+  {
+    "line": 141,
+    "issue": "God Function",
+    "raw_code": "async def handle_intake(chat_id: int, text: str) -> str:",
+    "file": "src/bot/intake.py"
+  },
+  {
+    "line": 275,
+    "issue": "God Function",
+    "raw_code": "async def _run_auto_engine(session: Session) -> Session:",
+    "file": "src/bot/intake.py"
+  },
+  {
+    "line": 755,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception:\n        logger.exception(\"Webhook processing failed\")\n        return {\"status\": \"error\", \"message\": \"Internal server error\"}",
+    "file": "src/bot/app.py"
+  },
+  {
+    "line": 805,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception:\n        logger.exception(\"Agent webhook processing failed\")\n        return {\"status\": \"error\", \"message\": \"Internal server error\"}",
+    "file": "src/bot/app.py"
+  },
+  {
+    "line": 43,
+    "issue": "God Function",
+    "raw_code": "async def process_webhook_logic(data: dict):",
+    "file": "src/bot/app.py"
+  },
+  {
+    "line": 43,
+    "issue": "Deep Nesting",
+    "raw_code": "if \"callback_query\" in data: ... if callback_data in (\"tailor_yes\", \"tailor_no\"): ... if proceed: ... if not can_generate_report(chat_id):",
+    "file": "src/bot/app.py"
+  },
+  {
+    "line": 37,
+    "issue": "Stray Tag",
+    "raw_code": "# We ignore master.json for now as it's not explicitly in the metadata table yet",
+    "file": "src/bot/housekeep.py"
+  },
+  {
+    "line": 47,
+    "issue": "Stray Tag",
+    "raw_code": "# Note: _run_auto_engine expects dob/location in metadata",
+    "file": "src/bot/stakeholder_intake.py"
+  },
+  {
+    "line": 51,
+    "issue": "Stray Tag",
+    "raw_code": "# Manual mode (if supported for stakeholders)",
+    "file": "src/bot/stakeholder_intake.py"
+  },
+  {
+    "line": 75,
+    "issue": "Stray Tag",
+    "raw_code": "# Quota enforcement (max 3 per category)",
+    "file": "src/bot/stakeholder_intake.py"
+  },
+  {
+    "line": 76,
+    "issue": "Stray Tag",
+    "raw_code": "# Note: If the alias already exists, upsert handles it (it's an update, not an add)",
+    "file": "src/bot/stakeholder_intake.py"
+  },
+  {
+    "line": 77,
+    "issue": "Stray Tag",
+    "raw_code": "# We check if this is a NEW addition vs an UPDATE.",
+    "file": "src/bot/stakeholder_intake.py"
+  },
+  {
+    "line": 87,
+    "issue": "Stray Tag",
+    "raw_code": "# sexuality_dynamic",
+    "file": "src/bot/stakeholder_intake.py"
+  },
+  {
+    "line": 135,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as exp_err:\n                logger.error(f\"Failed to export updated monthly reports: {exp_err}\")",
+    "file": "src/bot/report_utils.py"
+  },
+  {
+    "line": 25,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception:\n            # REQUIREMENT: Fail silently here because logging setup must never crash.\n            # stdout.reconfigure can fail in restricted environments (CI, pipes, etc.)\n            # but this is non-fatal \u2014 the console handler will still work with default encoding.\n            pass",
+    "file": "src/bot/logging_utils.py"
+  },
+  {
+    "line": 135,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.warning(f\"Failed to fetch current pillars: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 255,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.error(f\"Failed to pre-build calendar for user {user_id}: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 476,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as json_err:\n                logger.warning(f\"Failed to decode RAG queries JSON: {json_err}. Raw text: {raw}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 483,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.warning(f\"Query generation failed: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 555,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.error(f\"Failed to retrieve monthly context from master.json: {e}\")\n            raise e",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 635,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as _re:\n        logger.warning(f\"Reviewer flags load failed: {_re}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 655,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.warning(f\"Memory storage failed: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 682,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.error(f\"Failed to save narrative to cache: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 725,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.warning(f\"Failed to load profile for {user_id}: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 755,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.warning(f\"Failed to load master.json for {user_id}: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 793,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.warning(f\"Failed to classify Ge Ju during reconstruction: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 855,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            logger.warning(f\"Ranking simplification failed: {e}\")",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 936,
+    "issue": "God Function",
+    "raw_code": "async def handle_ask(user_id: int, question: str) -> str:",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 1055,
+    "issue": "Silent Failure",
+    "raw_code": "except ValueError:\n            pass",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 1075,
+    "issue": "Silent Failure",
+    "raw_code": "except ValueError:\n            pass",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 1084,
+    "issue": "Silent Failure",
+    "raw_code": "except ValueError:\n            pass",
+    "file": "src/bot/chronomancer_handler.py"
+  },
+  {
+    "line": 315,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception:\n        logger.warning(\"auto_repair_month: regex-scrubbed JSON failed to parse, returning original month_data\", exc_info=True)\n        return month_data",
+    "file": "src/bot/validators.py"
+  },
+  {
+    "line": 103,
+    "issue": "Silent Failure",
+    "raw_code": "except TimeoutError:\n                    pass  # No new signals, just loop and re-check DB.",
+    "file": "src/bot/queue_worker.py"
+  },
+  {
+    "line": 23,
+    "issue": "Stray Tag",
+    "raw_code": "# Assuming an environment variable for admin ID",
+    "file": "src/bot/reliability.py"
+  },
+  {
+    "line": 23,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n            print(f\"[WARN] Could not enable WAL mode: {e}\")",
+    "file": "src/bot/db.py"
+  },
+  {
+    "line": 215,
+    "issue": "God Function",
+    "raw_code": "def _run_migrations(self):",
+    "file": "src/bot/db.py"
+  },
+  {
+    "line": 466,
+    "issue": "Stray Tag",
+    "raw_code": "# ------------------------------------------------------------------",
+    "file": "src/bot/db.py"
+  },
+  {
+    "line": 115,
+    "issue": "God Function",
+    "raw_code": "async def send_telegram_message(...):",
+    "file": "src/bot/utils.py"
+  },
+  {
+    "line": 146,
+    "issue": "God Function",
+    "raw_code": "async def edit_telegram_message(...):",
+    "file": "src/bot/utils.py"
+  },
+  {
+    "line": 215,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception as e:\n        logger.error(f\"Conductor parse failed: {type(e).__name__}: {e}\\nRaw: {raw[:500]}\")\n        clean_reply = raw.split(\"---\")[0].split(\"JSON:\")[0].replace(\"REPLY:\", \"\").strip()\n        return clean_reply, {}, False",
+    "file": "src/bot/conductor.py"
+  },
+  {
+    "line": 106,
+    "issue": "God Function",
+    "raw_code": "def generate_response(self, messages, response_format=None, tools=None):",
+    "file": "src/memory/mem0_store.py"
+  },
+  {
+    "line": 165,
+    "issue": "Deep Nesting",
+    "raw_code": "if is_local_gemini_3_1:\n    # Prepend to the first user content parts\n    user_msg_found = False\n    for item in contents:\n        if item[\"role\"] == \"user\":\n            item[\"parts\"][0][\"text\"] = f\"System prompt: {system_text}\\n\\nUser prompt: {item['parts'][0]['text']}\"",
+    "file": "src/memory/mem0_store.py"
+  }
+]

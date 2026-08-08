@@ -1,0 +1,1 @@
+{"scanned_files_count": {{sample_count}}, "audit_results": [{"name": "src2.{{a}} -> src2.{{b}} -> src2.{{a}}", "file_path": "src2/{{module}}.py", "line": {{line}}, "status": "FALSE_POSITIVE", "severity": "LOW", "reason": "Lazy import inside function body prevents module-level circular init.", "updated_at": "{{iso_timestamp}}"}]}

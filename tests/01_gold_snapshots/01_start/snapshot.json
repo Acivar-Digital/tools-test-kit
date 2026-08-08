@@ -1,0 +1,116 @@
+{
+  "scenario": "start_command_and_promo_unlock",
+  "description": "Paid user runs /start; Free user runs /start, gets locked on /auto, unlocks with promo code, and proceeds",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_exists_in_db": true,
+    "user_has_report": false
+  },
+  "platform": "test_telegram01",
+  "users": [
+    {
+      "chat_id": 999123489,
+      "platform": "test_telegram01",
+      "tier": "PAID"
+    },
+    {
+      "chat_id": 999123490,
+      "platform": "test_telegram01",
+      "tier": "FREE"
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "label": "existing_paid_user",
+      "input": {
+        "command": "/start",
+        "chat_id": 999123489
+      },
+      "expected": {
+        "http_status": 200,
+        "bot_message_contains": "Welcome to BaziForcast",
+        "bot_message_contains_any": [
+          "/auto",
+          "/input",
+          "select"
+        ]
+      },
+      "actual_response": ""
+    },
+    {
+      "step": 2,
+      "label": "new_free_user_start",
+      "input": {
+        "command": "/start",
+        "chat_id": 999123490
+      },
+      "expected": {
+        "http_status": 200,
+        "bot_message_contains": "Welcome to BaziForcast",
+        "bot_message_contains_any": [
+          "/auto",
+          "/input",
+          "select"
+        ]
+      },
+      "actual_response": ""
+    },
+    {
+      "step": 3,
+      "label": "new_free_user_auto_locked",
+      "input": {
+        "command": "/auto",
+        "chat_id": 999123490
+      },
+      "expected": {
+        "http_status": 200,
+        "bot_message_contains": "Locked",
+        "bot_message_contains_any": [
+          "promo",
+          "code"
+        ]
+      },
+      "actual_response": ""
+    },
+    {
+      "step": 4,
+      "label": "new_free_user_promo_accepted",
+      "input": {
+        "command": "frenfren",
+        "chat_id": 999123490
+      },
+      "expected": {
+        "http_status": 200,
+        "bot_message_contains": "accepted",
+        "bot_message_contains_any": [
+          "Promo",
+          "generate"
+        ]
+      },
+      "actual_response": ""
+    },
+    {
+      "step": 5,
+      "label": "new_free_user_auto_unlocked",
+      "input": {
+        "command": "/auto",
+        "chat_id": 999123490
+      },
+      "expected": {
+        "http_status": 200,
+        "bot_message_contains": "share your name",
+        "bot_message_contains_any": [
+          "name",
+          "Alias"
+        ]
+      },
+      "actual_response": ""
+    }
+  ],
+  "last_updated": "",
+  "notes": [
+    "/start deletes session, /auto checks report lock, promo code unlocks it"
+  ]
+}

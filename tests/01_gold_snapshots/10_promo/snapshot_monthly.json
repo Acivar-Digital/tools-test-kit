@@ -1,0 +1,50 @@
+{
+  "scenario": "promo_monthly",
+  "description": "Tests /promo_monthly or env var PROMO_MONTHLY",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "env_var_set": "PROMO_MONTHLY",
+    "user_exists_in_db": false,
+    "user_has_report": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": "setup_1",
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "text": "$PROMO_MONTHLY",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Promo code accepted"
+      }
+    }
+  ],
+  "notes": [
+    "Promo code acceptance doesn't change session",
+    "Reads env var PROMO_MONTHLY \u2192 matches user input \u2192 db.set_monthly_code(chat_id, True)",
+    "Unlocks can_generate_report gate",
+    "No specific /command \u2014 matches exact env var text"
+  ],
+  "last_updated": "2026-06-27T00:55:21.430262+00:00"
+}

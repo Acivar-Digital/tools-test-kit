@@ -1,0 +1,280 @@
+{
+  "pydantic_exceptions": [
+    {
+      "file": "src2/core/database/models.py",
+      "class": "User",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "PlatformAccount",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "ConsentRecord",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "Session",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "PromoCode",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "UserPromoUsage",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "ChatLog",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "Report",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "DailyForecast",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "Stakeholder",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "UserPreference",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/database/models.py",
+      "class": "JobQueue",
+      "reason": "SQLAlchemy declarative base model \u2014 must inherit Base, not BaseModel"
+    },
+    {
+      "file": "src2/core/memory/mem0_store.py",
+      "class": "Mem0Store",
+      "reason": "Service wrapper around mem0 Memory \u2014 stateful adapter, not a data model"
+    },
+    {
+      "file": "src2/core/memory/mem0_store.py",
+      "class": "InHouseBGEM3Embedder",
+      "reason": "Internal embedder adapter wrapping BGE-M3 \u2014 not a data model"
+    },
+    {
+      "file": "src2/core/memory/mem0_store.py",
+      "class": "InHouseMem0LLM",
+      "reason": "Internal LLM adapter wrapping mem0 \u2014 not a data model"
+    },
+    {
+      "file": "src2/core/memory/mem0_store.py",
+      "class": "Mem0ExtractionError",
+      "reason": "Exception subclass \u2014 allowed per ALLOWED_NON_PYDANTIC_BASES"
+    },
+    {
+      "file": "src2/core/memory/memory_manager.py",
+      "class": "MemoryManager",
+      "reason": "Singleton coordinator managing memory lifecycle \u2014 not a data container"
+    },
+    {
+      "file": "src2/core/platforms/base.py",
+      "class": "ChannelAdapter",
+      "reason": "Abstract base class (ABC) for platform adapters \u2014 not a data model"
+    },
+    {
+      "file": "src2/core/platforms/telegram.py",
+      "class": "TelegramAdapter",
+      "reason": "Concrete platform adapter inheriting ABC \u2014 not a data model"
+    },
+    {
+      "file": "src2/core/rotator.py",
+      "class": "ModelFactory",
+      "reason": "Stateless factory for Pydantic AI model instantiation \u2014 no data to validate"
+    },
+    {
+      "file": "src2/core/services/storage.py",
+      "class": "StorageService",
+      "reason": "SQLAlchemy session lifecycle wrapper \u2014 must use SQLAlchemy API, not Pydantic"
+    },
+    {
+      "file": "src2/core/tools/bd_config.py",
+      "class": "ConfigManager",
+      "reason": "CLI configuration loader/saver \u2014 plain utility class, not a data model"
+    },
+    {
+      "file": "src2/interfaces/telegram/chronomancer/oracle_gatherer.py",
+      "class": "_StakeholderInfo",
+      "reason": "Private internal dataclass \u2014 low ROI to convert, no external usage"
+    },
+    {
+      "file": "src2/interfaces/telegram/conductor.py",
+      "class": "ConductorDeps",
+      "reason": "Internal @dataclass for dependency injection \u2014 converting to BaseModel risks breaking positional arg patterns"
+    },
+    {
+      "file": "src2/interfaces/telegram/db.py",
+      "class": "Database",
+      "reason": "SQLAlchemy DAO \u2014 must use SQLAlchemy engine/session, not Pydantic"
+    },
+    {
+      "file": "src2/interfaces/telegram/evaluation.py",
+      "class": "InputEvaluator",
+      "reason": "Stateless validator wrapping a Pydantic AI agent \u2014 the class itself is orchestration, not data"
+    },
+    {
+      "file": "src2/interfaces/telegram/gatekeeper.py",
+      "class": "Gatekeeper",
+      "reason": "Facade coordinating Pydantic AI subagents \u2014 inner data classes are already Pydantic"
+    },
+    {
+      "file": "src2/interfaces/telegram/queue_worker.py",
+      "class": "QueueManager",
+      "reason": "Async service coordinator managing Redis/Valkey task queue \u2014 not a data model"
+    },
+    {
+      "file": "src2/interfaces/telegram/text_manager.py",
+      "class": "TextManager",
+      "reason": "Singleton loading YAML message templates \u2014 inner data classes are already Pydantic"
+    },
+    {
+      "file": "src2/interfaces/telegram/utils.py",
+      "class": "ChronomancerReply",
+      "reason": "str subclass for type-safe reply wrapping \u2014 Pydantic adds no value for str subclasses"
+    },
+    {
+      "file": "src2/core/rotator.py",
+      "class": "TrainingDataSpanProcessor",
+      "reason": "Must implement OpenTelemetry SDK SpanProcessor interface for tracing instrumentation. Cannot substitute with BaseModel."
+    },
+    {
+      "file": "src2/interfaces/telegram/conductor.py",
+      "class": "SafeDict",
+      "reason": "Must inherit from dict to support str.format_map() with safe key access via __missing__. BaseModel is not a dict subclass."
+    }
+  ],
+  "cc_exceptions": [
+    {
+      "file": "src2/engine/orchestrator.py",
+      "function": "run_full_engine",
+      "cc": 108,
+      "reason": "Main engine orchestration loop \u2014 high complexity is inherent to the function's role coordinating all Bazi calculation modules. Refactoring would split logical cohesion."
+    },
+    {
+      "file": "src2/engine/orchestrator.py",
+      "function": "_parse_pillar",
+      "cc": 6,
+      "reason": "Pillar parsing with match/case for all 10 Heavenly Stems and 12 Earthly Branches \u2014 complexity is from exhaustive pattern matching, not poor design."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "calculate_ten_gods",
+      "cc": 18,
+      "reason": "Ten God calculation with exhaustive stem-branch interaction matrix \u2014 complexity is inherent to the domain logic."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "get_day_hour_ten_god_emphasis",
+      "cc": 10,
+      "reason": "Day-hour Ten God emphasis calculation with multiple conditional branches for each hour pillar combination."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "check_san_he_resolution_trigger",
+      "cc": 9,
+      "reason": "San He resolution trigger checking with multiple combination patterns."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "check_tomb_clash_trigger",
+      "cc": 8,
+      "reason": "Tomb/Clash trigger checking with multiple branch interaction patterns."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "detect_ten_god_absence",
+      "cc": 8,
+      "reason": "Ten God absence detection across all pillars with multiple conditional checks."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "_classify_ten_gods_by_category",
+      "cc": 7,
+      "reason": "Classification of Ten Gods into categories with multiple branch conditions."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "calculate_ten_god_dominance",
+      "cc": 7,
+      "reason": "Ten God dominance calculation with multiple scoring branches."
+    },
+    {
+      "file": "src2/engine/module6_ten_gods.py",
+      "function": "get_seasonal_ten_god_weight",
+      "cc": 6,
+      "reason": "Seasonal Ten God weight calculation with seasonal adjustment branches."
+    },
+    {
+      "file": "src2/engine/module13_spectrum.py",
+      "function": "calculate_strength_profile",
+      "cc": 9,
+      "reason": "Strength profile calculation with multiple element interaction checks."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_generate_month_narrative",
+      "cc": 11,
+      "reason": "Monthly narrative generation with multiple event/activity formatting branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_build_narrative_response",
+      "cc": 9,
+      "reason": "Narrative response building with multiple section formatting branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_export_single_month_report",
+      "cc": 8,
+      "reason": "Single month report export with multiple output format branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_format_month_line",
+      "cc": 8,
+      "reason": "Month line formatting with multiple conditional display branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_resolve_advisory_and_ten_god",
+      "cc": 7,
+      "reason": "Advisory and Ten God resolution with multiple lookup and fallback branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_get_technical_narrative",
+      "cc": 7,
+      "reason": "Technical narrative generation with multiple content assembly branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_resolve_month_data",
+      "cc": 7,
+      "reason": "Month data resolution with multiple source lookup branches."
+    },
+    {
+      "file": "src2/interfaces/telegram/report_utils.py",
+      "function": "_build_menu_text",
+      "cc": 6,
+      "reason": "Menu text building with multiple formatting branches."
+    }
+  ]
+}

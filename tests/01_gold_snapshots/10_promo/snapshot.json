@@ -1,0 +1,8 @@
+{
+  "steps": [],
+  "last_updated": "2026-06-27T00:54:29.394677+00:00",
+  "prerequisites": {
+    "user_exists_in_db": false,
+    "user_has_report": false
+  }
+}

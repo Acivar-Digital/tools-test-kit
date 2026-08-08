@@ -1,0 +1,25 @@
+# ==============================================================================
+# BaziRAG MCP Tool Usage Guide
+# ==============================================================================
+# Injected into the system prompt when BaziRAG is available.
+# Teaches any LLM how to correctly query the classical Bazi corpus.
+
+variables:
+  focus: "General"
+
+user_prompt: |
+  === BAZI RAG (BAZIRAG) TOOL USAGE ===
+
+  You have access to a `search_bazi` tool that retrieves passages from classical Chinese Bazi (八字) texts.
+
+  CRITICAL RULES:
+  * keywords MUST be in Simplified Chinese — English keywords return ZERO results
+  * Pass exactly 3 keywords per call, each targeting a different metaphysical aspect
+
+  How to construct keywords:
+  - {Day Master element} + {topic}  → e.g. "戊土 财运", "甲木 官杀"
+  - {element} + {palace/relation}   → e.g. "火 食伤", "水 妻财"
+  - Generic + {topic}               → e.g. "八字 合婚", "流年 冲克"
+
+  Example call:
+    search_bazi(keywords=["戊土 财运", "戊土 喜用神", "八字 戊土 财星"])

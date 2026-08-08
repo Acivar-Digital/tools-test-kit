@@ -1,0 +1,144 @@
+{
+  "scenario": "manual_input_early_lock",
+  "description": "Tests /input manual pillar entry flow: early lock check, enter promo code frenfren, run intake, tailoring, and generate report",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_exists_in_db": false,
+    "user_has_report": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": 1,
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Welcome"
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/input"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Report Locked"
+      }
+    },
+    {
+      "step": 3,
+      "input": {
+        "text": "frenfren"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "accepted"
+      }
+    },
+    {
+      "step": 4,
+      "input": {
+        "command": "/input"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains_any": [
+          "Name",
+          "format",
+          "Gender"
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "input": {
+        "text": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Ding Zi\n2\ufe0f\u20e3 Month: Yi Si\n3\ufe0f\u20e3 Day: Geng Chen\n4\ufe0f\u20e3 Hour: Ding Chou\n5\ufe0f\u20e3 Da Yun: Geng Zi\n6\ufe0f\u20e3 Strength: Weak\n7\ufe0f\u20e3 Favorable: Metal, Water\n8\ufe0f\u20e3 Unfavorable: Fire\n9\ufe0f\u20e3 Neutral: Earth, Wood"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "impossible pillar"
+      }
+    },
+    {
+      "step": 6,
+      "input": {
+        "text": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Ding Si\n2\ufe0f\u20e3 Month: Jia Chou\n3\ufe0f\u20e3 Day: Geng Chen\n4\ufe0f\u20e3 Hour: Ding Chou\n5\ufe0f\u20e3 Da Yun: Geng Zi\n6\ufe0f\u20e3 Strength: Weak\n7\ufe0f\u20e3 Favorable: Metal, Water\n8\ufe0f\u20e3 Unfavorable: Fire\n9\ufe0f\u20e3 Neutral: Earth, Wood"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "impossible pillar"
+      }
+    },
+    {
+      "step": 7,
+      "input": {
+        "text": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Ding Si\n2\ufe0f\u20e3 Month: Yi Si\n3\ufe0f\u20e3 Day: Geng Chen\n4\ufe0f\u20e3 Hour: Ding Chou\n5\ufe0f\u20e3 Da Yun: Geng Zi\n6\ufe0f\u20e3 Strength: Weak\n7\ufe0f\u20e3 Favorable: Metal, Water\n8\ufe0f\u20e3 Unfavorable: Water\n9\ufe0f\u20e3 Neutral: Earth, Wood"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "both favorable and unfavorable"
+      }
+    },
+    {
+      "step": 8,
+      "input": {
+        "text": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Ding Si\n2\ufe0f\u20e3 Month: Yi Si\n3\ufe0f\u20e3 Day: Geng Chen\n4\ufe0f\u20e3 Hour: Ding Chou\n5\ufe0f\u20e3 Da Yun: Geng Zi\n6\ufe0f\u20e3 Strength: Weak\n7\ufe0f\u20e3 Favorable: Air, Metal\n8\ufe0f\u20e3 Unfavorable: Fire\n9\ufe0f\u20e3 Neutral: Earth, Wood"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Missing element"
+      }
+    },
+    {
+      "step": 9,
+      "input": {
+        "text": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Dingg Sii\n2\ufe0f\u20e3 Month: Yii Sii\n3\ufe0f\u20e3 Day: Gengg Chenn\n4\ufe0f\u20e3 Hour: Dingg Chouu\n5\ufe0f\u20e3 Da Yun: Gengg Zii\n6\ufe0f\u20e3 Strength: Weakk\n7\ufe0f\u20e3 Favorable: Metall, Watr\n8\ufe0f\u20e3 Unfavorable: Firee\n9\ufe0f\u20e3 Neutral: Earthh, Woodd"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Here is what I understood"
+      }
+    },
+    {
+      "step": 10,
+      "input": {
+        "text": "Yes"
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "customised report"
+      }
+    }
+  ],
+  "notes": [
+    "/input starts manual entry with early lock"
+  ],
+  "last_updated": "2026-06-28T05:32:43+00:00"
+}

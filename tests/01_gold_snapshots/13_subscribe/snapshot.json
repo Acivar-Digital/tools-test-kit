@@ -1,0 +1,52 @@
+{
+  "scenario": "subscribe",
+  "description": "Tests /subscribe command",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_has_report": false,
+    "user_exists_in_db": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": "setup_1",
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/subscribe",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains_any": [
+          "subscribe",
+          "daily",
+          "schedule"
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "/subscribe is a global handler",
+    "Enables scheduled daily reports via scheduler",
+    "Skipped in GOLD \u2014 requires scheduler daemon"
+  ],
+  "last_updated": "2026-06-27T00:56:13.457075+00:00"
+}

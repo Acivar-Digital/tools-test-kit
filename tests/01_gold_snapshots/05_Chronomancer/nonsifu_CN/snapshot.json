@@ -1,0 +1,112 @@
+{
+  "scenario": "chrono_ask",
+  "description": "Tests multi-turn Chronomancer conversation, memory ingestion, and recall for user Tester (chat_id 999)",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_has_report": true,
+    "user_is_admin": true,
+    "session_step": "CHRONOMANCER",
+    "user_exists_in_db": true
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": 1,
+      "input": {
+        "command": "/daily",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": "CHRONOMANCER"
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/daily",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": "CHRONOMANCER"
+      }
+    },
+    {
+      "step": 3,
+      "input": {
+        "text": "Is today a good day to meet my partner?",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": "CHRONOMANCER",
+        "bot_message_contains_any": [
+          "partner",
+          "meet",
+          "compatibility",
+          "day"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "input": {
+        "text": "I recently started a new job as a Senior Engineer, and I am planning to buy a house next month in Singapore.",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": "CHRONOMANCER",
+        "bot_message_contains_any": [
+          "singapore",
+          "job",
+          "engineer",
+          "house"
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "input": {
+        "text": "Based on my Singapore plans, what should I look out for?",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": "CHRONOMANCER",
+        "bot_message_contains_any": [
+          "singapore",
+          "plans",
+          "house",
+          "job"
+        ]
+      }
+    },
+    {
+      "step": 6,
+      "input": {
+        "command": "/daily",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": "CHRONOMANCER"
+      }
+    }
+  ],
+  "notes": [
+    "Tests sequentially dependent conversational turns with memory storage and recall.",
+    "Bypasses remote LLM calls using integration mocks during automated validation."
+  ],
+  "last_updated": "2026-06-28T02:04:00Z"
+}

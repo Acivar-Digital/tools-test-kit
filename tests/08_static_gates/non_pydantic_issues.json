@@ -1,0 +1,319 @@
+[
+  {
+    "issue_id": "ISSUE-001",
+    "file_path": "core/database/models.py",
+    "class_name": "User",
+    "line_number": 9,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-002",
+    "file_path": "core/database/models.py",
+    "class_name": "PlatformAccount",
+    "line_number": 19,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-003",
+    "file_path": "core/database/models.py",
+    "class_name": "ConsentRecord",
+    "line_number": 32,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-004",
+    "file_path": "core/database/models.py",
+    "class_name": "Session",
+    "line_number": 47,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-005",
+    "file_path": "core/database/models.py",
+    "class_name": "PromoCode",
+    "line_number": 56,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-006",
+    "file_path": "core/database/models.py",
+    "class_name": "UserPromoUsage",
+    "line_number": 69,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-007",
+    "file_path": "core/database/models.py",
+    "class_name": "ChatLog",
+    "line_number": 80,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-008",
+    "file_path": "core/database/models.py",
+    "class_name": "Report",
+    "line_number": 91,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-009",
+    "file_path": "core/database/models.py",
+    "class_name": "DailyForecast",
+    "line_number": 104,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-010",
+    "file_path": "core/database/models.py",
+    "class_name": "Stakeholder",
+    "line_number": 124,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-011",
+    "file_path": "core/database/models.py",
+    "class_name": "UserPreference",
+    "line_number": 139,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-012",
+    "file_path": "core/database/models.py",
+    "class_name": "JobQueue",
+    "line_number": 153,
+    "bases": [
+      "Base"
+    ],
+    "decorators": [],
+    "status": "ignored - ORM"
+  },
+  {
+    "issue_id": "ISSUE-013",
+    "file_path": "core/memory/mem0_store.py",
+    "class_name": "InHouseBGEM3Embedder",
+    "line_number": 114,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-014",
+    "file_path": "core/memory/mem0_store.py",
+    "class_name": "InHouseMem0LLM",
+    "line_number": 303,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-015",
+    "file_path": "core/memory/mem0_store.py",
+    "class_name": "Mem0Store",
+    "line_number": 343,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-016",
+    "file_path": "core/memory/memory_manager.py",
+    "class_name": "MemoryManager",
+    "line_number": 50,
+    "bases": [],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-017",
+    "file_path": "core/platforms/base.py",
+    "class_name": "ChannelAdapter",
+    "line_number": 29,
+    "bases": [
+      "ABC"
+    ],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-018",
+    "file_path": "core/platforms/telegram.py",
+    "class_name": "TelegramAdapter",
+    "line_number": 61,
+    "bases": [
+      "ChannelAdapter"
+    ],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-019",
+    "file_path": "core/rotator.py",
+    "class_name": "TrainingDataSpanProcessor",
+    "line_number": 13,
+    "bases": [
+      "SpanProcessor"
+    ],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-020",
+    "file_path": "core/rotator.py",
+    "class_name": "ModelFactory",
+    "line_number": 92,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-021",
+    "file_path": "core/services/storage.py",
+    "class_name": "StorageService",
+    "line_number": 7,
+    "bases": [],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-022",
+    "file_path": "core/tools/bd_config.py",
+    "class_name": "ConfigManager",
+    "line_number": 6,
+    "bases": [],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-023",
+    "file_path": "interfaces/telegram/chronomancer/oracle_gatherer.py",
+    "class_name": "_StakeholderInfo",
+    "line_number": 202,
+    "bases": [],
+    "decorators": [
+      "dataclass"
+    ],
+    "status": "target"
+  },
+  {
+    "issue_id": "ISSUE-024",
+    "file_path": "interfaces/telegram/conductor.py",
+    "class_name": "ConductorDeps",
+    "line_number": 168,
+    "bases": [],
+    "decorators": [
+      "dataclass"
+    ],
+    "status": "target"
+  },
+  {
+    "issue_id": "ISSUE-025",
+    "file_path": "interfaces/telegram/conductor.py",
+    "class_name": "SafeDict",
+    "line_number": 179,
+    "bases": [
+      "dict"
+    ],
+    "decorators": [],
+    "status": "target"
+  },
+  {
+    "issue_id": "ISSUE-026",
+    "file_path": "interfaces/telegram/db.py",
+    "class_name": "Database",
+    "line_number": 82,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-027",
+    "file_path": "interfaces/telegram/evaluation.py",
+    "class_name": "InputEvaluator",
+    "line_number": 1,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-028",
+    "file_path": "interfaces/telegram/gatekeeper.py",
+    "class_name": "Gatekeeper",
+    "line_number": 74,
+    "bases": [],
+    "decorators": [],
+    "status": "pending"
+  },
+  {
+    "issue_id": "ISSUE-029",
+    "file_path": "interfaces/telegram/queue_worker.py",
+    "class_name": "QueueManager",
+    "line_number": 31,
+    "bases": [],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-030",
+    "file_path": "interfaces/telegram/text_manager.py",
+    "class_name": "TextManager",
+    "line_number": 35,
+    "bases": [],
+    "decorators": [],
+    "status": "ignored - Service Class"
+  },
+  {
+    "issue_id": "ISSUE-031",
+    "file_path": "interfaces/telegram/utils.py",
+    "class_name": "ChronomancerReply",
+    "line_number": 15,
+    "bases": [
+      "str"
+    ],
+    "decorators": [],
+    "status": "target"
+  }
+]

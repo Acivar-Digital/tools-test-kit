@@ -1,0 +1,263 @@
+{
+  "scenario": "auto_intake_decline_customisation",
+  "description": "User runs /auto, gets locked, enters promo code frenfren, runs intake, declines customisation, and generates standard report",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_is_admin": true,
+    "user_exists_in_db": false,
+    "user_has_report": false
+  },
+  "test_user": {
+    "chat_id": 999,
+    "name": "Test Profile",
+    "alias": "TEST",
+    "gender": "Male",
+    "dob": "1977-04-28 11:51",
+    "location": "Singapore"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "input": {
+        "command": "/auto",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": false,
+        "session_step_after": null,
+        "bot_message_contains": "Locked"
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "text": "frenfren"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": false,
+        "session_step_after": null,
+        "bot_message_contains": "accepted"
+      }
+    },
+    {
+      "step": 3,
+      "input": {
+        "command": "/auto"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "share your name"
+      }
+    },
+    {
+      "step": 4,
+      "input": {
+        "text": "Name: Test Profile, Alias: TEST, Gender: Male"
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "location"
+      }
+    },
+    {
+      "step": 5,
+      "input": {
+        "text": "DOB: 1977-04-28 11:51, Location: Singapore"
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Here is what I understood"
+      }
+    },
+    {
+      "step": 6,
+      "input": {
+        "text": "Yes"
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "customised report"
+      }
+    },
+    {
+      "step": 7,
+      "input": {
+        "text": "No"
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Generating"
+      }
+    },
+    {
+      "step": 8,
+      "input": {
+        "command": "/auto",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Locked"
+      }
+    },
+    {
+      "step": 9,
+      "input": {
+        "text": "frenfren"
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "accepted"
+      }
+    },
+    {
+      "step": 10,
+      "input": {
+        "command": "/auto"
+      },
+      "expected": {
+        "http_status": 200,
+        "response_body": {
+          "status": "ok"
+        },
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "share your name"
+      }
+    },
+    {
+      "step": 11,
+      "input": {
+        "text": "Name: Test Profile, Alias: TEST, Gender: Male"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "location"
+      }
+    },
+    {
+      "step": 12,
+      "input": {
+        "text": "DOB: 1977-04-28 11:51, Location: Singapore"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Here is what I understood"
+      }
+    },
+    {
+      "step": 13,
+      "input": {
+        "text": "Yes"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "customised report"
+      }
+    },
+    {
+      "step": 14,
+      "input": {
+        "text": "Yes"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Career"
+      }
+    },
+    {
+      "step": 15,
+      "input": {
+        "text": "1"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Relationships"
+      }
+    },
+    {
+      "step": 16,
+      "input": {
+        "text": "1"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Wealth"
+      }
+    },
+    {
+      "step": 17,
+      "input": {
+        "text": "1"
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "noted your three concerns"
+      }
+    }
+  ],
+  "actual_bot_responses": {},
+  "last_updated": "2026-06-28T05:31:53+00:00",
+  "notes": [
+    "/auto intake decline customisation flow with early lock"
+  ]
+}

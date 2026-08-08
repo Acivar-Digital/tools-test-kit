@@ -1,0 +1,164 @@
+[
+  {
+    "line": 12,
+    "issue": "God Function",
+    "raw_code": "def format_k3_markdown(json_path: str, md_path: str) -> None:",
+    "file": "src/engine/report_formatter.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 66,
+    "issue": "God Function",
+    "raw_code": "def format_markdown_summary(summary_data: dict, profile_data: dict, month_metadata_list: list, months_forecast_data: list) -> str:",
+    "file": "src/engine/summarizer.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 133,
+    "issue": "God Function",
+    "raw_code": "async def run_summarizer_async(",
+    "file": "src/engine/summarizer.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 40,
+    "issue": "God Function",
+    "raw_code": "async def run_engine(",
+    "file": "src/engine/prompt_engine.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 136,
+    "issue": "God Function",
+    "raw_code": "def run_full_engine(profile: dict[str, Any], target_month_idx: int, target_year: int = 2026) -> dict[str, Any]:",
+    "file": "src/engine/orchestrator.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 125,
+    "issue": "Deep Nesting",
+    "raw_code": "async with BaziRAG_LOCK:\n            async with sse_client(mcp_url) as streams:\n                async with ClientSession(streams[0], streams[1]) as session:\n                    await asyncio.wait_for(session.initialize(), timeout=15.0)\n                    result = await asyncio.wait_for(\n                        session.call_tool(\"search_bazi\", {\"query\": query}),\n                        timeout=30.0,\n                    )",
+    "file": "src/engine/rag_client.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Deep nested conditionals in non-mathematical module; can be simplified to improve readability."
+  },
+  {
+    "line": 245,
+    "issue": "Silent Failure",
+    "raw_code": "except Exception:\n        pass",
+    "file": "src/bot/preflight.py",
+    "priority": "HIGH",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Genuine silent failure (except block with pass/return and no logging) in non-mathematical module."
+  },
+  {
+    "line": 105,
+    "issue": "Silent Failure",
+    "raw_code": "except (ValueError, TypeError):\n                pass",
+    "file": "src/bot/intake.py",
+    "priority": "HIGH",
+    "false_positive": false,
+    "rationale": "Genuine silent failure (except block with pass/return and no logging) in non-mathematical module."
+  },
+  {
+    "line": 141,
+    "issue": "God Function",
+    "raw_code": "async def handle_intake(chat_id: int, text: str) -> str:",
+    "file": "src/bot/intake.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 275,
+    "issue": "God Function",
+    "raw_code": "async def _run_auto_engine(session: Session) -> Session:",
+    "file": "src/bot/intake.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 43,
+    "issue": "God Function",
+    "raw_code": "async def process_webhook_logic(data: dict):",
+    "file": "src/bot/app.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 936,
+    "issue": "God Function",
+    "raw_code": "async def handle_ask(user_id: int, question: str) -> str:",
+    "file": "src/bot/chronomancer_handler.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 1055,
+    "issue": "Silent Failure",
+    "raw_code": "except ValueError:\n            pass",
+    "file": "src/bot/chronomancer_handler.py",
+    "priority": "HIGH",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Genuine silent failure (except block with pass/return and no logging) in non-mathematical module."
+  },
+  {
+    "line": 1075,
+    "issue": "Silent Failure",
+    "raw_code": "except ValueError:\n            pass",
+    "file": "src/bot/chronomancer_handler.py",
+    "priority": "HIGH",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Genuine silent failure (except block with pass/return and no logging) in non-mathematical module."
+  },
+  {
+    "line": 1084,
+    "issue": "Silent Failure",
+    "raw_code": "except ValueError:\n            pass",
+    "file": "src/bot/chronomancer_handler.py",
+    "priority": "HIGH",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Genuine silent failure (except block with pass/return and no logging) in non-mathematical module."
+  },
+  {
+    "line": 215,
+    "issue": "God Function",
+    "raw_code": "def _run_migrations(self):",
+    "file": "src/bot/db.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 106,
+    "issue": "God Function",
+    "raw_code": "def generate_response(self, messages, response_format=None, tools=None):",
+    "file": "src/memory/mem0_store.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Oversized/highly-complex function in non-mathematical helper module; candidate for modular refactoring."
+  },
+  {
+    "line": 165,
+    "issue": "Deep Nesting",
+    "raw_code": "if is_local_gemini_3_1:\n    # Prepend to the first user content parts\n    user_msg_found = False\n    for item in contents:\n        if item[\"role\"] == \"user\":\n            item[\"parts\"][0][\"text\"] = f\"System prompt: {system_text}\\n\\nUser prompt: {item['parts'][0]['text']}\"",
+    "file": "src/memory/mem0_store.py",
+    "priority": "MEDIUM",
+    "false_positive": false,
+    "rationale": "Line number shifted but code exists. Deep nested conditionals in non-mathematical module; can be simplified to improve readability."
+  }
+]

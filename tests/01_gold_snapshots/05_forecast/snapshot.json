@@ -1,0 +1,59 @@
+{
+  "scenario": "forecast_command",
+  "description": "User sends /forecast. Bot returns forecast menu with category options.",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_is_admin": true,
+    "user_exists_in_db": false,
+    "user_has_report": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": "setup_1",
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error [Errno 111] Connection refused>",
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/forecast",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Forecast Menu",
+        "bot_message_contains_any": [
+          "/best",
+          "/career",
+          "/love",
+          "/wealth",
+          "/travel",
+          "/30"
+        ]
+      }
+    }
+  ],
+  "expected_bot_response": "",
+  "notes": [
+    "/forecast sets CHRONOMANCER",
+    "handle_forecast_menu() returns static menu",
+    "Subcommands (/best, /career, etc.) trigger handle_forecast_category()",
+    "/30 triggers handle_forecast(chat_id, 30)"
+  ],
+  "last_updated": "2026-06-27T00:50:22.246601+00:00"
+}

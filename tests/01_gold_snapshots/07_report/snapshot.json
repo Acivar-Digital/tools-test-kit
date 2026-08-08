@@ -1,0 +1,56 @@
+{
+  "scenario": "report_command",
+  "description": "User sends /report after generating a report. Bot shows monthly forecast menu with 12 months.",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_has_report": false,
+    "report_master_json_exists": true,
+    "user_exists_in_db": false
+  },
+  "test_user": {
+    "chat_id": 999,
+    "name": "Test Profile",
+    "alias": "TEST"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "input": {
+        "command": "/report",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Your 2026 Monthly Forecasts",
+        "bot_message_contains_any": [
+          "/1",
+          "/2",
+          "/3",
+          "/4",
+          "/5",
+          "/6",
+          "/7",
+          "/8",
+          "/9",
+          "/10",
+          "/11",
+          "/12"
+        ]
+      }
+    }
+  ],
+  "expected_bot_response": "",
+  "notes": [
+    "/report is read-only global handler",
+    "Report must be generated first via /auto flow before /report works",
+    "If no reports exist, bot returns \"No reports found\"",
+    "get_report_menu_text() reads master JSON from disk",
+    "Bot response is NOT logged in ChatLogs (code quirk: /report handler returns before log_chat at line 543)",
+    "Telegram sendMessage will 400 for fake chat_id \u2014 expected"
+  ],
+  "last_updated": "2026-06-27T00:53:11.355597+00:00"
+}

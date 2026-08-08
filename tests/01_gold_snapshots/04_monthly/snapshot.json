@@ -1,0 +1,148 @@
+{
+  "scenario": "monthly_report_generation_manual_input",
+  "description": "User runs intake via manual /input, confirms details, completes tailoring concerns, and triggers customised monthly report generation.",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_exists_in_db": false,
+    "user_has_report": false
+  },
+  "test_user": {
+    "chat_id": 999
+  },
+  "steps": [
+    {
+      "step": 1,
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/input",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Locked"
+      }
+    },
+    {
+      "step": 3,
+      "input": {
+        "text": "frenfren",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "accepted"
+      }
+    },
+    {
+      "step": 4,
+      "input": {
+        "command": "/input",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "format"
+      }
+    },
+    {
+      "step": 5,
+      "input": {
+        "text": "Name: Test Profile\n\ud83c\udff7\ufe0f Alias: TEST\n\ud83d\udc64 Gender: Male\n1\ufe0f\u20e3 Year: Dingg Sii\n2\ufe0f\u20e3 Month: Yii Sii\n3\ufe0f\u20e3 Day: Gengg Chenn\n4\ufe0f\u20e3 Hour: Dingg Chouu\n5\ufe0f\u20e3 Da Yun: Gengg Zii\n6\ufe0f\u20e3 Strength: Weakk\n7\ufe0f\u20e3 Favorable: Metall, Watr\n8\ufe0f\u20e3 Unfavorable: Firee\n9\ufe0f\u20e3 Neutral: Earthh, Woodd",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Here is what I understood"
+      }
+    },
+    {
+      "step": 6,
+      "input": {
+        "text": "Yes",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "customised report"
+      }
+    },
+    {
+      "step": 7,
+      "input": {
+        "text": "Yes",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Career"
+      }
+    },
+    {
+      "step": 8,
+      "input": {
+        "text": "1",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Relationships"
+      }
+    },
+    {
+      "step": 9,
+      "input": {
+        "text": "1",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Wealth"
+      }
+    },
+    {
+      "step": 10,
+      "input": {
+        "text": "1",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 200,
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "personalised Bazi forecast now"
+      }
+    }
+  ],
+  "notes": [
+    "Triggers background customised annual report generation via manual input"
+  ],
+  "last_updated": "2026-07-02T09:14:35+00:00"
+}

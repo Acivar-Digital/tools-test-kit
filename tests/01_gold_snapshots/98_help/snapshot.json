@@ -1,0 +1,61 @@
+{
+  "scenario": "help_command",
+  "description": "User sends /help, receives manual input format template",
+  "prerequisites": {
+    "server_running": true,
+    "webhook_configured": true,
+    "user_exists_in_db": false,
+    "user_has_report": false
+  },
+  "steps": [
+    {
+      "step": "setup_1",
+      "input": {
+        "command": "/start",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null
+      }
+    },
+    {
+      "step": 2,
+      "input": {
+        "command": "/help",
+        "chat_id": 999
+      },
+      "expected": {
+        "http_status": 0,
+        "response_body": "<urlopen error timed out>",
+        "no_traceback": true,
+        "session_step_after": null,
+        "bot_message_contains": "Please share your details in this format",
+        "bot_message_contains_any": [
+          "Name:",
+          "Alias:",
+          "Gender:",
+          "Year:",
+          "Month:",
+          "Day:",
+          "Hour:",
+          "Da Yun:",
+          "Strength:",
+          "Favorable:",
+          "Unfavorable:",
+          "Neutral:"
+        ]
+      }
+    }
+  ],
+  "expected_bot_response": "",
+  "notes": [
+    "/help is global handler, session unchanged",
+    "HELP_TEMPLATE is a static string \u2014 always identical",
+    "Telegram sendMessage will 400 for fake chat_id 999 \u2014 this is expected",
+    "Bot logs show Markdown parsing failure + 400 retries \u2014 both expected for test users"
+  ],
+  "last_updated": "2026-06-27T00:56:39.473174+00:00"
+}
