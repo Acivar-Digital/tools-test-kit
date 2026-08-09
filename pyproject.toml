@@ -5,7 +5,7 @@ build-backend = "uv.build"
 [project]
 name = "kit"
 version = "0.1.0"
-description = ""Portable, runnable slices of baziforecaster — hygiene scanner, test stubs, and dev tools for interviews and community use."
+description = "Portable, runnable slices of baziforecaster — hygiene scanner, test stubs, and dev tools for interviews and community use."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
@@ -24,12 +24,8 @@ classifiers = [
     "Topic :: Software Development :: Quality Assurance",
 ]
 
-[tool.uv]
-workspace = [
-    "hygiene",
-    "tests",
-    "tools",
-]
+[tool.uv.workspace]
+members = ["tests"]
 
 [target.'kit']
 dependencies = []
